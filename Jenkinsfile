@@ -15,7 +15,7 @@ pipeline {
                
                  environment.env()
                 }
-                    echo 'Hello World'
+                    
             }
         }
 
