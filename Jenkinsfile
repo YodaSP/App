@@ -24,7 +24,12 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-
+        
+         stage('docker container instance') {
+            steps {
+                 echo "hello world"
+            }
+        }
 
         stage('deploy') {
             steps {
