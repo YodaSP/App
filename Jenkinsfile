@@ -28,7 +28,7 @@ pipeline {
          stage('docker container instance') {
             steps {
                 script{
-                 sh sudo docker build -t customimage .
+                 sh 'sudo docker build -t customimage .'
                 }
             }
         }
