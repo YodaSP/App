@@ -1,4 +1,4 @@
-@Library("shared-library") _
+//@Library("shared-library") _
 pipeline {
 
     agent any
@@ -8,16 +8,16 @@ pipeline {
     }
     stages {
 
-        stage('Pre Build Stage') {
+//         stage('Pre Build Stage') {
 
-            steps {
-                script {
+//             steps {
+//                 script {
 
-                    environment.env()
-                }
+//                     environment.env()
+//                 }
 
-            }
-        }
+//             }
+//         }
 
         stage('build') {
             steps {
@@ -33,14 +33,14 @@ pipeline {
             }
         }
 
-        stage('deploy') {
-            steps {
+//         stage('deploy') {
+//             steps {
 
-                sh 'sudo cp -r /var/lib/jenkins/workspace/My_App2/webapp/target/webapp.war /opt/apache-tomcat-8.5.73/webapps/'
+//                 sh 'sudo cp -r /var/lib/jenkins/workspace/My_App2/webapp/target/webapp.war /opt/apache-tomcat-8.5.73/webapps/'
 
 
-            }
-        }
+//             }
+//         }
     }
 
 
