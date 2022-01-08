@@ -2,22 +2,13 @@
 pipeline {
 
     agent any
+    
     tools {
         // Install the Maven version configured.
         maven "maven3.8.4"
     }
+    
     stages {
-
-//         stage('Pre Build Stage') {
-
-//             steps {
-//                 script {
-
-//                     environment.env()
-//                 }
-
-//             }
-//         }
 
         stage('build') {
             steps {
@@ -25,13 +16,14 @@ pipeline {
             }
         }
         
-         stage('docker container instance') {
-            steps {
-                script{
-                 sh 'sudo docker build -t customimage .'
-                }
-            }
-        }
+        
+//          stage('docker container instance') {
+//             steps {
+//                 script{
+//                  sh 'sudo docker build -t customimage .'
+//                 }
+//             }
+//         }
 
 //         stage('deploy') {
 //             steps {
