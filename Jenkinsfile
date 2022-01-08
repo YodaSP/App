@@ -5,7 +5,7 @@ pipeline {
     
     tools {
         // Install the Maven version configured.
-        maven "maven3.8.4"
+        maven "maven3"
     }
     
     stages {
