@@ -37,7 +37,7 @@ pipeline {
         }
         stage('Upload to nexus'){
             steps{
-                nexusArtifactUploader artifacts: [[artifactId: 'maven-project', classifier: '', file: '/var/lib/jenkins/workspace/Application/webapp/target/webapp.war', type: 'war']], credentialsId: '3f9a696a-c0ae-417b-a268-2d397cb20948', groupId: 'com.example.maven-project', nexusUrl: '13.127.162.77', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://13.127.162.77:8081/repository/Application/', version: '1.0-SNAPSHOT'      
+                nexusArtifactUploader artifacts: [[artifactId: 'maven-project', classifier: '', file: '/var/lib/jenkins/workspace/Application/webapp/target/webapp.war', type: 'war']], credentialsId: '3f9a696a-c0ae-417b-a268-2d397cb20948', groupId: 'com.example.maven-project', nexusUrl: '13.127.162.77:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://13.127.162.77:8081/repository/Application/', version: '1.0-SNAPSHOT'      
             }
         }
     
