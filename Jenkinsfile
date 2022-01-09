@@ -29,9 +29,7 @@ pipeline {
             steps {
 
                 sh 'sudo cp -r /var/lib/jenkins/workspace/Application/webapp/target/webapp.war /usr/share/tomcat/webapps/'
-        
-
-        
+             
 
 
 
