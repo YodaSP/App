@@ -18,6 +18,7 @@ pipeline {
     
     stage('Docker image build') {
       steps {
+        sh 'docker images rmi*' 
         sh 'docker build -t myapp .'
       }
     }
@@ -26,6 +27,15 @@ pipeline {
       steps {
 
         sh 'sudo cp -r /var/lib/jenkins/workspace/Application/webapp/target/webapp.war /usr/share/tomcat/webapps/'
+
+      }
+    }
+
+    stage('upload image to dockerhub') {
+      steps {
+
+        sh 'docker image tag myapp shivampandeyaps/myapp_v2.0'
+        sh 'docker push shivampandeyaps/myapp_v2.0'
 
       }
     }
