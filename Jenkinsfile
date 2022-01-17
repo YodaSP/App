@@ -34,8 +34,9 @@ pipeline {
     stage('upload image to dockerhub') {
       steps {
 
-        sh 'docker image tag myapp shivampandeyaps/myapp_v2.0'
-        sh 'docker push shivampandeyaps/myapp_v2.0'
+        sh 'docker login -u shivampandeyaps -p shivam8962807622'
+        sh 'docker image tag myapp shivampandeyaps/myapp_v3.0'
+        sh 'docker push shivampandeyaps/myapp_v3.0'
 
       }
     }
