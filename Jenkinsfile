@@ -15,6 +15,12 @@ pipeline {
         sh 'mvn clean install'
       }
     }
+    
+    stage('Docker image build') {
+      steps {
+        sh 'docker build -t myapp .'
+      }
+    }
 
     stage('deploy') {
       steps {
