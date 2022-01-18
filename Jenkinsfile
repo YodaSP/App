@@ -1,4 +1,3 @@
-//@Library("shared-library") _
 pipeline {
 
   agent any
@@ -35,8 +34,8 @@ pipeline {
       steps {
 
         sh 'docker login -u shivampandeyaps -p shivam8962807622'
-        sh 'docker image tag myapp shivampandeyaps/myapp_v3.0'
-        sh 'docker push shivampandeyaps/myapp_v3.0'
+        sh 'docker image tag myapp shivampandeyaps/myapp_v4.0'
+        sh 'docker push shivampandeyaps/myapp_v4.0'
 
       }
     }
